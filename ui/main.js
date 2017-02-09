@@ -9,6 +9,7 @@ element.innerHTML="new value";
 var img = document.getElementById('img');
 var marginleft=0;
 function moveRight(){
+    console.log(marginleft)
 	marginleft=marginleft+10;
 	img.style.marginLeft = marginleft+'px';
 }
