@@ -43,7 +43,6 @@ function createTemplate(data){
     var date=data.date;
     var heading=data.heading;
     var content=data.content;
-
     var htmlTemplate = `
     <html>
     	<head>
@@ -82,6 +81,12 @@ app.get('/', function (req, res) {
 app.get('/:articleName',function(req, res){
    var articleName=req.params.articleName;
    res.send(createTemplate(articles[articleName]));
+});
+
+var counter=0;
+app.get('/counter',function(res,req){
+   counter=counter+1;
+   res.send(counter.toString());
 });
 
 app.get('/ui/style.css', function (req, res) {
