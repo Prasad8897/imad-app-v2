@@ -1,18 +1,15 @@
 console.log('Loaded!');
-
-//Change the text of the main-text
-
-var element = document.getElementById('main-text');
-element.innerHTML="new value";
-
-//Move image
-var img = document.getElementById('img');
-var marginleft=0;
-function moveRight(){
-    console.log(marginleft)
-	marginleft=marginleft+10;
-	img.style.marginLeft = marginleft+'px';
-}
-img.onClick = function(){
-	var interval = setInterval(moveRight,100);
+// Counter code
+var count = 0;
+var button = document.getElementById('counter');
+button.onClick = function(){
+    
+    // make a request to the counter end point
+    
+    // Capture the response and store it in a variable
+    
+    //Render the variable in the correct the span
+    counter = counter+1;
+    var span = document.getElementById('count');
+    span.innerHTML= counter.toString();
 };
