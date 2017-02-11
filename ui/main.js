@@ -19,7 +19,6 @@ button.onclick = function(){
         }
         // not done
     };
-    
     request.open('GET','http://prasad8897.imad.hasura-app.io/counter',true);
     request.send(null);
 };
