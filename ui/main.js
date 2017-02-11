@@ -7,8 +7,9 @@ button.onclick = function(){
     var request = new XMLHttpRequest();
     
     // Capture the response and store it in a variable
-    
+    var a = 1;
     request.onreadystatechange = function(){
+        console.log(a);
         if(request.readystate === XMLHttpRequest.DONE){
             // take some action
             console.log(request.status);
@@ -22,9 +23,11 @@ button.onclick = function(){
         else{
             console.log("not done yet");
         }
+        
         // not done
     };
     
     request.open('GET','http://prasad8897.imad.hasura-app.io/counter',true);
     request.send(null);
+    a=a+1;
 };
