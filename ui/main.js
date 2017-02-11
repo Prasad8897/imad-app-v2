@@ -19,6 +19,9 @@ button.onclick = function(){
                 console.log(counter.toString());
             }
         }
+        else{
+            console.log("not done yet");
+        }
         // not done
     };
     
