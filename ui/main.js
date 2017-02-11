@@ -8,11 +8,10 @@ button.onclick = function(){
     
     // Capture the response and store it in a variable
     request.onreadystatechange = function(){
+        console.log(request.status);
         if(request.readystate === XMLHttpRequest.DONE){
             // take some action
-            console.log(request.status);
             if(request.status === 200){
-                
                 var counter = request.respondText;
                 var span = document.getElementById('count');
                 span.innerHTML= counter.toString();
@@ -21,7 +20,6 @@ button.onclick = function(){
         }
         // not done
     };
-    
     request.open('GET','http://prasad8897.imad.hasura-app.io/counter',true);
     request.send(null);
 };
