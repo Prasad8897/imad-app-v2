@@ -10,7 +10,6 @@ button.onclick = function(){
     
     request.open('GET','http://prasad8897.imad.hasura-app.io/counter',true);
     request.onreadystatechange = function(){
-        console.log(request.readystate);
         if(request.readystate === XMLHttpRequest.DONE){
             // take some action
             console.log(request.status);
